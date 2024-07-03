@@ -20,11 +20,11 @@ body {
     background-color: rgba(255, 255, 255, 0);
     z-index: 1000;
     overflow: auto;
-    width: 90%; /* Adjust the width as needed */
+    width: 90%; 
     height: 100%;
-    border: none; /* Remove border */
-    background-color: #fff; /* Optional: Set iframe background color */
-    border-radius: 10px; /* Optional: Add border radius */
+    border: none; 
+    background-color: #fff; 
+    border-radius: 10px; 
     max-width: 550px;
     max-height: 510px;
   }
@@ -162,11 +162,11 @@ body {
 }
   
 iframe {
-  width: 90%; /* Adjust the width as needed */
+  width: 90%; 
   height: 100%;
-  border: none; /* Remove border */
-  background-color: #fff; /* Optional: Set iframe background color */
-  border-radius: 10px; /* Optional: Add border radius */
+  border: none;
+  background-color: #fff; 
+  border-radius: 10px; 
   max-width: 550px;
   max-height: 510px;
 }
