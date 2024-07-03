@@ -43,7 +43,7 @@ async function refreshAccessToken() {
 
 app.use(bodyParser.json());
 
-app.post('/api/addDeal', async (req, res) => {
+app.post('https://akhrorovad.github.io/api/addDeal', async (req, res) => {
   try {
     console.log('Sending request...');
     await refreshAccessToken();
