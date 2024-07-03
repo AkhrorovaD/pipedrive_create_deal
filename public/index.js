@@ -22,7 +22,7 @@ document.getElementById('jobForm').addEventListener('submit', function(event) {
         test_select: document.getElementById('testSelect').value
     };
 
-    fetch('http://localhost:3000/api/addDeal', {
+    fetch('/api/addDeal', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
