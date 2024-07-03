@@ -1,22 +1,4 @@
-import sdk from 'pipedrive-sdk';
 
-async function openCustomModal() {
-  try {
-    const { status } = await sdk.execute(Command.OPEN_MODAL, {
-      type: Modal.CUSTOM_MODAL,
-      action_id: 'e4b5362a-fb90-41bf-a5b1-bc20d10c1d54',
-      data: {
-        item: 'xyz',
-      },
-    });
-
-    console.log('Modal opened successfully:', status);
-  } catch (error) {
-    console.error('Error opening modal:', error);
-  }
-}
-
-openCustomModal();
 
 
 document.getElementById('jobForm').addEventListener('submit', function(event) {
