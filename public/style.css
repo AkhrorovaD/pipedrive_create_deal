@@ -6,7 +6,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
   }
   
   .modal {
@@ -20,34 +20,44 @@ body {
     background-color: rgba(255, 255, 255, 0);
     z-index: 1000;
     overflow: auto;
+    width: 90%; /* Adjust the width as needed */
+    height: 100%;
+    border: none; /* Remove border */
+    background-color: #fff; /* Optional: Set iframe background color */
+    border-radius: 10px; /* Optional: Add border radius */
+    max-width: 550px;
+    max-height: 510px;
   }
   
   .modal-content {
     background-color: rgb(247, 246, 246);
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     border-radius: 5px;
     max-width: 90%;
-    max-height: 90%;
+    max-height: 95%;
     overflow: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
   
   .modal-header {
+    margin-top: -10px;
     display: flex;
     margin-bottom:15px;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
     background-color: #f5f4f4;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    height: 20px;
+    height: 15px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.616) ;
   }
   
   .modal-title {
     margin: 0;
-    font-size: 0.9rem; 
+    font-size: 0.8rem; 
   }
   
   
@@ -56,7 +66,7 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #333;
     padding: 0;
     margin: 0;
@@ -71,7 +81,7 @@ body {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
   }
   
   .container {
@@ -93,7 +103,7 @@ body {
     width: calc(100% - 10px); 
     height: 30px;
     padding: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -111,9 +121,9 @@ body {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 0px;
     font-weight: bold;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.582) ;
     
@@ -135,7 +145,7 @@ body {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 20px;
     margin-left: 10px;
     font-weight: bold;
@@ -147,6 +157,16 @@ body {
 }
 
 .btns{
-    margin-left: 140px;
+    margin-left: 110px;
+    margin-bottom: -30px;
 }
   
+iframe {
+  width: 90%; /* Adjust the width as needed */
+  height: 100%;
+  border: none; /* Remove border */
+  background-color: #fff; /* Optional: Set iframe background color */
+  border-radius: 10px; /* Optional: Add border radius */
+  max-width: 550px;
+  max-height: 510px;
+}

@@ -7,117 +7,81 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script>
-    window.intercomSettings = {
-      app_id: "hg2w673u"
-    };
-  </script>
-  <script>
-    (function() {
-      var w = window;
-      var ic = w.Intercom;
-      if (typeof ic === "function") {
-        ic('reattach_activator');
-        ic('update', intercomSettings);
-      } else {
-        var d = document;
-        var i = function() { i.c(arguments); };
-        i.q = [];
-        i.c = function(args) { i.q.push(args); };
-        w.Intercom = i;
-        function l() {
-          var s = d.createElement('script');
-          s.type = 'text/javascript';
-          s.async = true;
-          s.src = 'https://widget.intercom.io/widget/hg2w673u';
-          var x = d.getElementsByTagName('script')[0];
-          x.parentNode.insertBefore(s, x);
-        }
-        if (w.attachEvent) {
-          w.attachEvent('onload', l);
-        } else {
-          w.addEventListener('load', l, false);
-        }
-      }
-    })();
-  </script>
-
   <div class="modal" id="jobModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title">NEW Create a job</h2>
-        <button class="close-button" id="custom-close-button">&times;</button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">NEW Create a job</h2>
+          <button class="close-button" id="custom-close-button">&times;</button>
+        </div>
+        <form id="jobForm">
+          <div class="grid-container">
+            <div class="container">
+              <h3 class="h3">Client details</h3>
+              <div class="grid2">
+                <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+                <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+              </div>
+              <input type="text" id="phone" name="phone" placeholder="Phone" required>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="container">
+              <h3 class="h3">Job details</h3>
+              <div class="grid2">
+                <select id="jobType" name="jobType" required>
+                  <option value="" disabled selected>Job type</option>
+                  <option value="Recall job">Recall job</option>
+                  <option value="Warranty job">Warranty job</option>
+                  <option value="Lead job">Lead job</option>
+                </select>
+                <select id="jobSource" name="jobSource" required>
+                  <option value="" disabled selected>Job source</option>
+                  <option value="SL Kyndryl">SL Kyndryl</option>
+                  <option value="GL Mark Inc">GL Mark Inc</option>
+                  <option value="SL Micron">SL Micron</option>
+                </select>
+              </div>
+              <textarea id="jobDescription" name="jobDescription" placeholder="Job description" required></textarea>
+            </div>
+            <div class="container">
+              <h3 class="h3" >Service location</h3>
+              <input type="text" id="address" name="address" placeholder="Address" required>
+              <input type="text" id="city" name="city" placeholder="City" required>
+              <input type="text" id="state" name="state" placeholder="State" required>
+              <div class="grid2">
+                <input type="text" id="zipCode" name="zipCode" placeholder="Zip code" required>
+                <select id="area" name="area" required>
+                  <option value="" disabled selected>Area</option>
+                  <option value="Fort Myers">Fort Myers</option>
+                  <option value="Sarasota">Sarasota</option>
+                  <option value="Springfield">Springfield</option>
+                  <option value="Annapolis">Annapolis</option>
+                </select>
+              </div>
+            </div>
+            <div class="container">
+              <h3 class="h3">Scheduled</h3>
+              <input type="date" id="startDate" name="startDate" placeholder="dd.mm.yyyy" required>
+              <div class="grid2">
+                <input type="time" id="startTime" name="startTime" required>
+                <input type="time" id="endTime" name="endTime" required>
+              </div>
+              <select id="testSelect" name="Select technician" required>
+                <option value="" disabled selected>Select technician</option>
+                <option value="Kim Natalya">Kim Natalya</option>
+                <option value="Louisa Johns">Louisa Johns</option>
+                <option value="Adam Jarvis">Adam Jarvis</option>
+                <option value="Abdulraheem Naseer">Abdulraheem Naseer</option>
+                <option value="Charles Barber">Charles Barber</option>
+              </select>
+            </div>
+          </div>
+          <div class="btns">
+            <button type="submit" class="btn" id="request">Create Job</button>
+            <button type="submit" class="btn2">Save info</button>
+            <p id="successMessage"></p>
+          </div>
+        </form>
       </div>
-      <form id="jobForm">
-        <div class="grid-container">
-          <div class="container">
-            <h3>Client details</h3>
-            <div class="grid2">
-            <input type="text" id="firstName" name="firstName" placeholder="First name" required>
-            <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
-            </div>
-            <input type="text" id="phone" name="phone" placeholder="Phone" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-          </div>
-          <div class="container">
-            <h3>Job details</h3>
-            <div class="grid2">
-            <select id="jobType" name="jobType" required>
-              <option value="" disabled selected>Job type</option>
-              <option value="Recall job">Recall job</option>
-              <option value="Warranty job">Warranty job</option>
-              <option value="Lead job">Lead job</option>
-            </select>
-            <select id="jobSource" name="jobSource" required>
-              <option value="" disabled selected>Job source</option>
-              <option value="SL Kyndryl">SL Kyndryl</option>
-              <option value="GL Mark Inc">GL Mark Inc</option>
-              <option value="SL Micron">SL Micron</option>
-            </select>
-          </div>
-            <textarea id="jobDescription" name="jobDescription" placeholder="Job description" required></textarea>
-          </div>
-          <div class="container">
-            <h3>Service location</h3>
-            <input type="text" id="address" name="address" placeholder="Address" required>
-            <input type="text" id="city" name="city" placeholder="City" required>
-            <input type="text" id="state" name="state" placeholder="State" required>
-            <div class="grid2">
-            <input type="text" id="zipCode" name="zipCode" placeholder="Zip code" required>
-            <select id="area" name="area" required>
-              <option value="" disabled selected>Area</option>
-              <option value="Fort Myers">Fort Myers</option>
-              <option value="Sarasota">Sarasota</option>
-              <option value="Springfield">Springfield</option>
-              <option value="Annapolis">Annapolis</option>
-            </select>
-          </div>
-          </div>
-          <div class="container">
-            <h3>Scheduled</h3>
-            <input type="date" id="startDate" name="startDate" placeholder="dd.mm.yyyy" required>
-            <div class="grid2">
-            <input type="time" id="startTime" name="startTime" required>
-            <input type="time" id="endTime" name="endTime" required>
-            </div>
-            <select id="testSelect" name="Select technician" required>
-              <option value="" disabled selected>Select technician</option>
-              <option value="Kim Natalya">Kim Natalya</option>
-              <option value="Louisa Johns">Louisa Johns</option>
-              <option value="Adam Jarvis">Adam Jarvis</option>
-              <option value="Abdulraheem Naseer">Abdulraheem Naseer</option>
-              <option value="Charles Barber">Charles Barber</option>
-            </select>
-          </div>
-        </div>
-        <div class="btns">
-          <button type="submit" class="btn" id="request">Create Job</button>
-        <button type="submit" class="btn2">Save info</button>
-        <p id="successMessage"></p>
-        </div>
-      
-      </form>
-    </div>
   </div>
   <script src="index.js"></script>
 </body>
